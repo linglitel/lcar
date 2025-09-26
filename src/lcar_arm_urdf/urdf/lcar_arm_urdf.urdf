@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version:   Build Version: 1.6.9335.19781
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="lcar_arm_urdf">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.02926890694392 0.0335677776513082 0.0578761181628154"
+        rpy="0 0 0" />
+      <mass
+        value="4.81415144801555" />
+      <inertia
+        ixx="0.013469343791239"
+        ixy="-1.47432832463088E-38"
+        ixz="-2.62538878256914E-35"
+        iyy="0.013469343791239"
+        iyz="6.69080537886196E-19"
+        izz="0.024422257855332" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lcar_arm_urdf/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lcar_arm_urdf/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link1">
+    <inertial>
+      <origin
+        xyz="-7.26573697040767E-11 -0.0200000028683219 -5.53615452092426E-10"
+        rpy="0 0 0" />
+      <mass
+        value="0.125947655057645" />
+      <inertia
+        ixx="4.86436700739409E-05"
+        ixy="2.04272646501287E-16"
+        ixz="1.44616032126546E-13"
+        iyy="6.94539601888196E-05"
+        iyz="2.11031418164204E-13"
+        izz="5.51381735463024E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lcar_arm_urdf/meshes/link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lcar_arm_urdf/meshes/link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint1"
+    type="continuous">
+    <origin
+      xyz="-0.0292689069439218 0.0335677776513077 0.0858777699921129"
+      rpy="-1.5707963267949 0 0.0447978554545242" />
+    <parent
+      link="base_link" />
+    <child
+      link="link1" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="100"
+      velocity="1" />
+  </joint>
+  <link
+    name="link2">
+    <inertial>
+      <origin
+        xyz="-0.153810011525643 0.000207975203657465 0.000496403569817148"
+        rpy="0 0 0" />
+      <mass
+        value="0.204308460446307" />
+      <inertia
+        ixx="5.88469849389552E-05"
+        ixy="-1.30852037743231E-06"
+        ixz="-3.71955217993701E-07"
+        iyy="0.0010557701363535"
+        iyz="-4.53839171198937E-09"
+        izz="0.00101653459805799" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lcar_arm_urdf/meshes/link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lcar_arm_urdf/meshes/link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint2"
+    type="continuous">
+    <origin
+      xyz="0 -0.0200000000000009 0"
+      rpy="1.5707963267949 0.825546390557576 1.5707963267949" />
+    <parent
+      link="link1" />
+    <child
+      link="link2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="100"
+      velocity="1" />
+  </joint>
+  <link
+    name="link3">
+    <inertial>
+      <origin
+        xyz="-0.186205644816554 -0.000731438896466874 -3.97214945943372E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.183595297698191" />
+      <inertia
+        ixx="1.9960713706461E-05"
+        ixy="-1.30852035481437E-06"
+        ixz="1.42372941999571E-08"
+        iyy="0.00101057089357093"
+        iyz="4.5383944075091E-09"
+        izz="0.00100658599677987" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lcar_arm_urdf/meshes/link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lcar_arm_urdf/meshes/link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint3"
+    type="continuous">
+    <origin
+      xyz="-0.355500000000002 -0.000500000000000264 0"
+      rpy="-3.14159265358979 0 1.49779550247654" />
+    <parent
+      link="link2" />
+    <child
+      link="link3" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="100"
+      velocity="1" />
+  </joint>
+  <link
+    name="link4">
+    <inertial>
+      <origin
+        xyz="-0.0123553764551634 -3.10640675448975E-05 1.38777878078145E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.00519804363608551" />
+      <inertia
+        ixx="1.51818586167438E-06"
+        ixy="9.016268676828E-23"
+        ixz="1.32348898008484E-22"
+        iyy="1.23081690267317E-06"
+        iyz="-1.30032792293336E-21"
+        izz="2.27727214056804E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lcar_arm_urdf/meshes/link4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lcar_arm_urdf/meshes/link4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint4"
+    type="continuous">
+    <origin
+      xyz="-0.341500000000001 -0.000499999999999723 0"
+      rpy="1.5707963267949 0 0.887395066155006" />
+    <parent
+      link="link3" />
+    <child
+      link="link4" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="100"
+      velocity="1" />
+  </joint>
+  <link
+    name="link5">
+    <inertial>
+      <origin
+        xyz="2.6802E-10 -1.9619E-11 -0.016953"
+        rpy="0 0 0" />
+      <mass
+        value="0.029285" />
+      <inertia
+        ixx="4.8189E-06"
+        ixy="-2.6955E-15"
+        ixz="2.0376E-13"
+        iyy="6.7801E-06"
+        iyz="-2.2618E-14"
+        izz="4.3867E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lcar_arm_urdf/meshes/link5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lcar_arm_urdf/meshes/link5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint5"
+    type="continuous">
+    <origin
+      xyz="-0.0315474620790718 -3.10640675449426E-05 0"
+      rpy="1.5707963267949 0.367299142897227 1.5707963267949" />
+    <parent
+      link="link4" />
+    <child
+      link="link5" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="100"
+      velocity="1" />
+  </joint>
+</robot>

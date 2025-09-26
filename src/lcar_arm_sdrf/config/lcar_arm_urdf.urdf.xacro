@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="lcar_arm_urdf">
+    <xacro:arg name="initial_positions_file" default="initial_positions.yaml" />
+
+    <!-- Import lcar_arm_urdf urdf file -->
+    <xacro:include filename="$(find lcar_arm_urdf)/urdf/lcar_arm_urdf.urdf" />
+
+    <!-- Import control_xacro -->
+    <xacro:include filename="lcar_arm_urdf.ros2_control.xacro" />
+
+    <xacro:lcar_arm_urdf_ros2_control name="lcar_arm_driver/LcarArmHardwareInterface" initial_positions_file="$(arg initial_positions_file)"/>
+
+</robot>

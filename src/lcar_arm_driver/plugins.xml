@@ -1,0 +1,9 @@
+<library path="lcar_arm_hardware_interface">
+  <class name="lcar_arm_driver/LcarArmHardwareInterface"
+         type="lcar_arm_driver::LcarArmHardwareInterface"
+         base_class_type="hardware_interface::SystemInterface">
+    <description>
+      Hardware interface for the LCAR arm.
+    </description>
+  </class>
+</library>

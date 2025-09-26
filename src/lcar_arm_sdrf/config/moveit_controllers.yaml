@@ -1,0 +1,18 @@
+# MoveIt uses this configuration for controller management
+
+moveit_controller_manager: moveit_simple_controller_manager/MoveItSimpleControllerManager
+
+moveit_simple_controller_manager:
+  controller_names:
+    - mainpulator_controller
+
+  mainpulator_controller:
+    type: FollowJointTrajectory
+    action_ns: follow_joint_trajectory # <--- 添加这一行
+    default: true                      # <--- 添加这一行，设为默认执行器
+    joints:
+      - joint1
+      - joint2
+      - joint3
+      - joint4
+      - joint5
